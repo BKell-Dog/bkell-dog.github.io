@@ -1,0 +1,24 @@
+{
+  "title": "Will Kelly's Homepage",
+  "description": "Hardware, Firmware, Programming, Environmentalism",
+  "author": "Will Kelly",
+  "language": "en",
+  "baseUrl": "https://willkelly.dev",
+  "writings": {
+    "title": "Lettres-aux-Phares",
+    "description": "Writings on history's most eminent thinkers."
+  },
+  "navLinks": [
+    { "text": "Home", "url": "/home/" },
+    { "text": "Data Log", "url": "/logs/" },
+    { "text": "Knowledge", "url": "/knowledge/" },
+    { "text": "Lettres", "url": "/lettres/" },
+    { "text": "The Mind", "url": "/mind/" },
+    { "text": "Web Design", "url": "/design-gallery/" }
+  ],
+  "socialMedia": {
+    "twitter": "https://x.com/wave_freak",
+    "github": "https://github.com/BKell-Dog"
+  },
+  "currentYear": 2026
+}

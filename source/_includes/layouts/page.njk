@@ -22,9 +22,15 @@
     <meta name="twitter:description" content="{{ site.description }}">
     <meta name="twitter:image" content="https://resume.willkelly.dev/assets/hyperbola-on-white.png">
 
-    <script src="script.js" defer></script>
+    {% if css %}
+    <link rel="stylesheet" href="/css/{{ css }}">
+    {% endif %}
   </head>
   <body>
     {{ content | safe }}
+
+    {% if script %}
+    <script src="/scripts/{{ script }}"></script>
+    {% endif %}
   </body>
 </html>
