@@ -24,6 +24,7 @@ function updateBackground(backgrounds) {
 
 	// Choose random background image from pre-made list
 	const chosen = pool[Math.floor(Math.random() * pool.length)];
+	console.log(backgrounds);
 	document.getElementById("background-image").style.backgroundImage = "url(" + chosen + ")";
 }
 
