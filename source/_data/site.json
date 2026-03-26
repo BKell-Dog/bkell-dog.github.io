@@ -4,6 +4,8 @@
   "author": "Will Kelly",
   "language": "en",
   "baseUrl": "https://willkelly.dev",
+  "favicon": "https://resume.willkelly.dev/assets/favicon.svg",
+  "welcomeText": ["Welcome.", "Here to see...", "Circuits", "Networking", "Microcontrollers", "Web Design", "Homelab", "Data Storage", "Math", "Robotics", "...."],
   "writings": {
     "title": "Lettres-aux-Phares",
     "description": "Writings on history's most eminent thinkers."

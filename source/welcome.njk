@@ -10,7 +10,7 @@ script: "welcome.js"
             <h1>{{ site.title }}</h1>
         </div>
         <div class="subtitle">
-            <a class="typewrite" data-period="2000" data-type='[ "Welcome.", "Here to see...", "Circuits", "Networking", "Microcontrollers", "Web Design", "Homelab", "Data Storage", "Mathematics", "Robotics", "...." ]'>
+            <a class="typewrite" data-period="2000" data-type="{{ site.welcomeText | dump }}">
                 <span class="wrap"></span>
             </a>
         </div>
