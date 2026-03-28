@@ -1,0 +1,221 @@
+---
+layout: page.njk
+css: resume.css
+script: resume.js
+---
+
+<main>
+
+<img src="/assets/hyperbola.svg" alt="Hyperbola" class="icon">
+
+<center class="overview">My name is Will Kelly, I am a hardware engineer, programmer, and environmentalist.</center>
+
+{% if resume.work %}
+<h1>Work</h1>
+
+{% for company, comp_info in resume.work %}
+<div class="company container">
+	<div class="company-header container-header">
+		{% if comp_info.website %}
+		<a href="{{ comp_info.website }}"><h2 class="company-name container-title">{{ company }}</h2></a>
+		{% else %}
+		<h2 class="company-name container-title">{{ company }}</h2>
+		{% endif %}
+		{% if comp_info.start and comp_info.end %}
+		<div class="company-meta container-meta">
+			{% if comp_info.location %}
+			<span class="company-location container-location">{{ comp_info.location }}</span>
+			{% endif %}
+			<time>{{ comp_info.start | formatDate("MMMM YYYY") }} — {{ comp_info.end | formatDate("MMMM YYYY") }}</time>
+		</div>
+		{% endif %}
+		<p>{{ comp_info.description }}</p>
+	</div>
+	
+	{% for role, role_info in comp_info.roles %}
+	<div class="role">
+		<h3>{{ role }}</h3>
+		{% if role_info.description %}
+			{% accordion "Description" %}
+				<p>{{ role_info.description }}</p>
+			{% endaccordion %}
+		{% endif %}
+
+		{% if role_info.responsibilities %}
+			{% accordion "Responsibilities" %}
+				<ul>
+		    	{% for responsibility in role_info.responsibilities %}
+		    		<li>{{ responsibility }}</li>
+		    	{% endfor %}
+		  		</ul>
+			{% endaccordion %}
+		{% endif %}
+
+		{% if role_info.skillsLearned %}
+			{% accordion "Skills Learned" %}
+				<ul class="two-column">
+		    	{% for skill in role_info.skillsLearned %}
+		    		<li>{{ skill }}</li>
+		    	{% endfor %}
+		  		</ul>
+			{% endaccordion %}
+		{% endif %}
+
+		{% if role_info.projects %}
+			{% accordion "Projects" %}
+				<ul class="two-column">
+		    	{% for project in role_info.projects %}
+		    		<li>{{ project }}</li>
+		    	{% endfor %}
+		  		</ul>
+			{% endaccordion %}
+		{% endif %}
+	</div>
+	{% endfor %}
+</div>
+{% endfor %}
+{% endif %}
+
+{% if resume.education %}
+<h1>Education</h1>
+
+{% for education, edu_info in resume.education %}
+<div class="education container">
+	<div class="education-header container-header">
+		{% if edu_info.website %}
+		<a href="{{ edu_info.website }}"><h2 class="education-name container-title">{{ education }}</h2></a>
+		{% else %}
+		<h2 class="education-name container-title">{{ education }}</h2>
+		{% endif %}
+		{% if edu_info.start and edu_info.end %}
+		<div class="education-meta container-meta">
+			{% if edu_info.location %}
+			<span class="education-location container-location">{{ edu_info.location }}</span>
+			{% endif %}
+			<time>{{ edu_info.start | formatDate("MMMM YYYY") }} — {{ edu_info.end | formatDate("MMMM YYYY") }}</time>
+		</div>
+		{% endif %}
+		<p>{{ edu_info.degree }} <i>{{ edu_info.honor }}</i>, {{ edu_info.major }}</p>
+	</div>
+</div>
+{% endfor %}
+{% endif %}
+
+{% if resume.volunteering %}
+<h1>Volunteering</h1>
+
+{% for volunteering, vol_info in resume.volunteering %}
+<div class="volunteering container">
+	<div class="volunteering-header container-header">
+		{% if vol_info.website %}
+		<a href="{{ vol_info.website }}"><h2 class="volunteering-name container-title">{{ volunteering }}</h2></a>
+		{% else %}
+		<h2 class="volunteering-name container-title">{{ volunteering }}</h2>
+		{% endif %}
+		{% if vol_info.start %}
+		<div class="volunteering-meta container-meta">
+			{% if vol_info.location %}
+			<span class="volunteering-location container-location">{{ vol_info.location }}</span>
+			{% endif %}
+			{% if vol_info.end %}
+			<time>{{ vol_info.start | formatDate("MMMM YYYY") }} — {{ vol_info.end | formatDate("MMMM YYYY") }}</time>
+			{% else %}
+			<time>{{ vol_info.start | formatDate("MMMM YYYY") }} — Present</time>
+			{% endif %}
+		</div>
+		{% endif %}
+		<p>{{ vol_info.description }}</p>
+	</div>
+
+	{% for role, role_info in vol_info.roles %}
+	<div class="role">
+		<h3>{{ role }}</h3>
+		{% if role_info.description %}
+			{% accordion "Role Description" %}
+				<p>{{ role_info.description }}</p>
+			{% endaccordion %}
+		{% endif %}
+
+		{% if role_info.responsibilities %}
+			{% accordion "Responsibilities" %}
+				<ul>
+		    	{% for responsibility in role_info.responsibilities %}
+		    		<li>{{ responsibility }}</li>
+		    	{% endfor %}
+		  		</ul>
+			{% endaccordion %}
+		{% endif %}
+
+		{% if role_info.skillsLearned %}
+			{% accordion "Skills Learned" %}
+				<ul class="two-column">
+		    	{% for skill in role_info.skillsLearned %}
+		    		<li>{{ skill }}</li>
+		    	{% endfor %}
+		  		</ul>
+			{% endaccordion %}
+		{% endif %}
+	</div>
+	{% endfor %}
+</div>
+{% endfor %}
+{% endif %}
+
+{% if resume.skills and resume.skills.enabled %}
+<h1>Skills</h1>
+
+<div class="skills container">
+	<div class="skills-grid">
+	{% for category, items in resume.skills %}
+	{% if category != "enabled" %}
+	    <div class="skills-column">
+	    	<h3 class="skills-category">{{ category }}</h3>
+	    	<ul class="skills-list">
+	      	{% for skill in items %}
+	        	<li>{{ skill }}</li>
+	        {% endfor %}
+	    	</ul>
+	    </div>
+	{% endif %}
+	{% endfor %}
+	</div>
+</div>
+{% endif %}
+
+{% if resume.interests %}
+<h1>Interests</h1>
+{% endif %}
+
+<!-- Footer -->
+{% if site.socialMedia %}
+<footer class="social-media">
+	{% if resume.PDF and resume.PDF.enabled %}
+	<hr>
+	<center><a class="download-button" href="{{ resume.PDF.link }}">Download this page as PDF</a></center>
+	{% endif %}
+	<hr>
+	<h1>Social Media</h1>
+	{% set socialMedia = site.socialMedia %}
+	<div class="social-media-icons">
+		{% if socialMedia.instagram %}
+		<a href="{{ socialMedia.instagram }}" target="_blank"><img width="24" height="24" src="/assets/icons8-instagram.svg" alt="instagram-"/></a>
+		{% endif %}
+		{% if socialMedia.github %}
+		<a href="{{ socialMedia.github }}" target="_blank"><img width="24" height="24" src="/assets/icons8-github.svg" alt="github"/></a>
+		{% endif %}
+		{% if socialMedia.linkedIn %}
+		<a href="{{ socialMedia.linkedIn }}" target="_blank"><img width="24" height="24" src="/assets/icons8-linkedin.svg" alt="linkedin"/></a>
+		{% endif %}
+		{% if socialMedia.telegram %}
+		<div class="tooltip-wrapper">
+		  <a href="{{ socialMedia.telegram }}" target="_blank">
+		    <img width="24" height="24" src="/assets/icons8-telegram-app.svg" alt="telegram"/>
+		  </a>
+		  <span class="tooltip">Text me.</span>
+		</div>
+		{% endif %}
+	</div>
+</footer>
+{% endif %}
+
+</main>

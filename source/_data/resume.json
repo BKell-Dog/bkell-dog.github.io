@@ -1,0 +1,77 @@
+{
+	"work": {
+		"General Motors": {
+			"location": "Warren, Michigan",
+			"start": "2023-07-17",
+    		"end": "2025-11-13",
+    		"roles": {
+    			"Wireless Hardware Engineer": {
+    				"start": "2024-05-01",
+      				"end": "2025-11-13",
+      				"description": "I was one of three field testers for the 'TCP' module which now connects all GM cars to the cell network. So I would test in our lab and on the road to find bugs in the TCP firmware / hardware and benchmark our progress to ensure we met KPIs.",
+      				"responsibilities": ["Understand cell network infrastructure.", "Work with cell carrier engineers (AT&T, Verizon, T-Mo.) and hardware suppliers (LG, Continental) regularly.", "Test bench repair.", "Gathering customer feedback data, analyzing, and improving internal standards."],
+      				"skillsLearned": ["Power Use Analysis", "MATLAB Scripting"]
+    			},
+    			"Design Release Engineer": {
+    				"start": "2023-07-17",
+      				"end": "2024-04-30",
+      				"description": "I was the main engineer responsible for the headliner and hard trim on the 2024-2026 Chevy Equinox EV, making sure it met U.S. regulations, GM standards, and was ready for the Equinox's mass production schedule.",
+      				"skillsLearned": ["International Supply Chain", "Injection Molded Plastics", "DFMEA", "DFSS Green Belt", "Meeting Production Timing"]
+    			}
+    		},
+    		"website": "https://gm.com"
+		},
+		"Electromagnetic Technologies Industries, Inc.": {
+			"location": "Boonton, New Jersey",
+			"start": "2021-05",
+			"end": "2021-09",
+			"description": "ETI was a small company of ~15 people, which made radios for L3/Harris Defense, commercial cell antennas in the MHz-GHz range, and supporting cell network infrastructure.",
+			"roles": {
+				"Engineering Intern": {
+					"description": "This was my internship between sophomore and junior year of college, and my first exposure to RF engineering. I was allowed and enabled to take certain small systems from conception to validation and production.",
+					"responsibilities": ["Design new devices from first principles.", "Order components to meet spec, cost, and regulation.", "Solder components to PCB.", "Perform initial testing like spectrum and VSWR analysis."]
+				}
+			},
+			"website": "https://etiworld.com"
+		}
+	},
+	"education": {
+		"New Jersey Institute of Technology": {
+			"location": "Newark, New Jersey",
+			"start": "September 2019",
+			"end": "May 2023",
+			"degree": "Bachelor's of Science",
+			"major": "Electrical Engineering",
+			"honor": "Cum Laude",
+			"website": "https://www.njit.edu"
+		}
+	},
+	"volunteering": {
+		"Native Bloom Initiative": {
+			"description": "I and a few friends started a nonprofit with the mission of covering New Jersey in pollinator gardens. NJ is the most urbanized state, so if we can figure out coexistnce with nature here, then it can be done anywhere.",
+			"location": "New Jersey's Green Spaces",
+			"start": "December 2023",
+			"website": "https://nativebloominitiative.org",
+			"roles": {
+				"President": {
+					"description": "I run the org, send emails, arrange plantings, lead volunteers, and manage finances."
+				}
+			}
+		}
+	},
+	"skills": {
+		"RF": ["Spectral Analysis", "VSWR Tuning", "Low Noise Circuits", "Power Dividers", "Antenna Far-Field Testing", "EMI/EMC Mitigation"],
+		"Electronics": ["Circuit Design", "PCB Design", "Soldering", "CAN Bus Architecture", "Microcontroller Programming", "AC-to-DC Power Converter Design", "Control Systems for Servo Motors"],
+		"Programming": ["Java", "Python", "C", "C++/C#", "Rust", "HTML/CSS/JS", "MATLAB / Simulink", "Arduino", "PostgreSQL", "Neo4j & Cypher"],
+		"Web Development": ["React", "HTTPS/TLS Protocol", "Github CI/CD", "Github Actions", "Vercel", "Render"],
+		"Networking": ["Server Management", "Linux", "Shell Scripting", "Nginx", "Docker/K3s"],
+		"CAD": ["Solidworks", "AutoCAD", "KiCAD"],
+		"Industrial": ["Supply Chain Management", "Dealing with Chinese Factories", "International Shipping"],
+		"Personal": ["Small Team Leadership", "Conflict Resolution"],
+		"enabled": true
+	},
+	"PDF": {
+		"link": "/assets/William Kelly - Hardware Engineer - Resume.pdf",
+		"enabled": false
+	}
+}
