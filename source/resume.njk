@@ -198,18 +198,21 @@ script: resume.js
 	{% set socialMedia = site.socialMedia %}
 	<div class="social-media-icons">
 		{% if socialMedia.instagram %}
-		<a href="{{ socialMedia.instagram }}" target="_blank"><img width="24" height="24" src="/assets/icons8-instagram.svg" alt="instagram-"/></a>
+		<a href="{{ socialMedia.instagram }}" target="_blank">
+			<img width="24" height="24" src="/assets/instagram.svg" alt="instagram-"/></a>
 		{% endif %}
 		{% if socialMedia.github %}
-		<a href="{{ socialMedia.github }}" target="_blank"><img width="24" height="24" src="/assets/icons8-github.svg" alt="github"/></a>
+		<a href="{{ socialMedia.github }}" target="_blank">
+			<img width="24" height="24" src="/assets/github.svg" alt="github"/></a>
 		{% endif %}
 		{% if socialMedia.linkedIn %}
-		<a href="{{ socialMedia.linkedIn }}" target="_blank"><img width="24" height="24" src="/assets/icons8-linkedin.svg" alt="linkedin"/></a>
+		<a href="{{ socialMedia.linkedIn }}" target="_blank">
+			<img width="24" height="24" src="/assets/linkedin.svg" alt="linkedin"/></a>
 		{% endif %}
 		{% if socialMedia.telegram %}
 		<div class="tooltip-wrapper">
 		  <a href="{{ socialMedia.telegram }}" target="_blank">
-		    <img width="24" height="24" src="/assets/icons8-telegram-app.svg" alt="telegram"/>
+		    <img width="24" height="24" src="/assets/telegram.svg" alt="telegram"/>
 		  </a>
 		  <span class="tooltip">Text me.</span>
 		</div>
