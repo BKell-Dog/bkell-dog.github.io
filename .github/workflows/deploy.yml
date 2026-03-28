@@ -14,7 +14,7 @@ concurrency:
   cancel-in-progress: false
 
 jobs:
-  build:
+  build-eleventy:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -28,18 +28,75 @@ jobs:
       - run: npm ci
       - run: npx @11ty/eleventy
 
-      - name: Upload artifact
-        uses: actions/upload-pages-artifact@v3
+      - name: Upload Eleventy output
+        uses: actions/upload-artifact@v4
         with:
+          name: eleventy-output
           path: ./public
 
+  build-quartz:
+    runs-on: ubuntu-latest
+    continue-on-error: true
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Clone Quartz
+        run: git clone --depth 1 https://github.com/jackyzha0/quartz.git _quartz
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Install Quartz dependencies
+        run: npm ci
+        working-directory: _quartz
+
+      - name: Copy Quartz config
+        run: cp quartz.config.ts _quartz/quartz.config.ts
+
+      - name: Copy content
+        run: |
+          rm -rf _quartz/content
+          cp -r source/knowledge/ _quartz/content
+
+      - name: Build Quartz
+        run: npx quartz build
+        working-directory: _quartz
+
+      - name: Upload Quartz output
+        uses: actions/upload-artifact@v4
+        with:
+          name: quartz-output
+          path: _quartz/public/
+
   deploy:
-    needs: build
+    needs: [build-eleventy, build-quartz]
+    # Run as long as Eleventy succeeded, regardless of Quartz
+    if: always() && needs.build-eleventy.result == 'success'
     runs-on: ubuntu-latest
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
     steps:
+      - name: Download Eleventy output
+        uses: actions/download-artifact@v4
+        with:
+          name: eleventy-output
+          path: _site
+
+      - name: Download Quartz output
+        if: needs.build-quartz.result == 'success'
+        uses: actions/download-artifact@v4
+        with:
+          name: quartz-output
+          path: _site/knowledge
+
+      - name: Upload Pages artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: _site/
+
       - name: Deploy
         id: deployment
         uses: actions/deploy-pages@v4
