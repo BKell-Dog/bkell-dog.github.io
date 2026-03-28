@@ -97,6 +97,7 @@ body {
     position: relative;
     transition: color 0.3s ease; /* Smooth text color transition */
     text-decoration: none;
+    text-transform: uppercase;
 }
 
 .enter-button::before {
@@ -123,7 +124,8 @@ body {
 /* Typewriter Effect */
 .typewrite {
     color: white;
-    text-transform: uppercase;
+    font-family: "Gruppo";
+    font-size: 1.3em;
 }
 
 /* Media Queries for Responsive Design */
