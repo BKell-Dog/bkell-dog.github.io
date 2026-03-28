@@ -27,7 +27,9 @@
     {% endif %}
   </head>
   <body>
+    {% block body %}
     {{ content | safe }}
+    {% endblock %}
 
     {% if script %}
     <script src="/scripts/{{ script }}"></script>

@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="32" height="32">
+  <!-- Background -->
+  <rect width="32" height="32" fill="#f2f3f4"/>
+
+  <!-- Horizontal line centered vertically, edge to edge -->
+  <line x1="0" y1="16" x2="32" y2="16" stroke="#000000" stroke-width="1.5"/>
+
+  <!-- Near-vertical line: 15° counterclockwise from vertical (75° from horizontal), edge to edge -->
+  <!-- passes through (16,16), hits top edge at x≈11.71 and bottom edge at x≈20.29 -->
+  <line x1="11.71" y1="0" x2="20.29" y2="32" stroke="#000000" stroke-width="1.5"/>
+</svg>

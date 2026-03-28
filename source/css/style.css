@@ -6,3 +6,8 @@
 html {
 	background-color: var(--off-white);
 }
+
+article {
+	margin: 5vh auto;
+	max-width: 60vw;
+}
