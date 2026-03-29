@@ -64,7 +64,7 @@ jobs:
         run: cp source/assets/favicon.png _quartz/quartz/static/icon.png
 
       - name: Copy custom CSS
-        run: cp quartz-config/variables.scss _quartz/quartz/styles/variables.scss
+        run: cp quartz-config/styles/ _quartz/quartz/styles/
 
       - name: Copy content
         run: |
