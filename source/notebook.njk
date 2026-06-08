@@ -1,0 +1,22 @@
+---
+layout: article.njk
+description: For writing, philosophic and technical.
+css: home.css
+---
+<section class="home">
+  <p class="tagline">The breadth of knowledge is wide and there is plenty to read.</p>
+
+  <h2>Recent</h2>
+  <ul class="post-list">
+  {% for lettre in collections.lettres | sort(true, false, "date") %}
+    <li>
+      <a href="{{ lettre.url }}">{{ lettre.data.title }}</a>
+      <div class="post-meta">
+        <time datetime="{{ lettre.date | formatDate("YYYY-MM-DD") }}">{{ lettre.date | formatDate }}</time>
+        <span class="reading-time">{{ lettre.data.readingTime }}</span>
+      </div>
+      <p class="post-desc">{{ lettre.data.description }}</p>
+    </li>
+  {% endfor %}
+  </ul>
+</section>

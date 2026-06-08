@@ -1,12 +1,16 @@
 ---
 layout: article.njk
+permalink: /index.html
 css: home.css
 ---
 
 Welcome. Under construction.
 
-See more about me <a href="/resume">here</a>.
+See who I <a href="/resume">am</a>.
 
 See what I <a href="/lettres">think</a>.
 
-See my <a href="/knowledge">knowledge base</a>.
+See what I <a href="/knowledge">know</a>.
+
+
+![https://wellcomecollection.org/works/gswvaqb5/items](/assets/skeleton.png)
