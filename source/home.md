@@ -12,5 +12,4 @@ See what I <a href="/lettres">think</a>.
 
 See what I <a href="/knowledge">know</a>.
 
-
 ![https://wellcomecollection.org/works/gswvaqb5/items](/assets/skeleton.png)

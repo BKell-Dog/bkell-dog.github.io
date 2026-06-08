@@ -1,4 +1,0 @@
-# Dot Product
-
-
-# Cross Product

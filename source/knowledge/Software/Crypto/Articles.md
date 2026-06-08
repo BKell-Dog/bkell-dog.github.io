@@ -1,1 +1,0 @@
-[Why Bitcoin Fails as Money: An Operational Risk Analysis](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3864612)
