@@ -8,7 +8,7 @@ Welcome. Under construction.
 
 See who I <a href="/resume">am</a>.
 
-See what I <a href="/lettres">think</a>.
+See what I <a href="/notebook">think</a>.
 
 See what I <a href="/knowledge">know</a>.
 

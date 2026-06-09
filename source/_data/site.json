@@ -11,10 +11,12 @@
     "description": "Writings on history's most eminent thinkers."
   },
   "navLinks": [
-    { "text": "Home", "url": "/home/" },
-    { "text": "Data Log", "url": "/logs/" },
-    { "text": "Knowledge", "url": "/knowledge/" },
-    { "text": "Lettres", "url": "/lettres/" },
+    { "text": "Home", "url": "/" },
+    { "text": "Notebook", "url": "/notebook/" },
+    { "text": "Knowledge", "url": "/knowledge/" }
+  ],
+  "inactiveNavLinks": [
+    { "text": "Sketchbook", "url": "/sketchbook/" },
     { "text": "The Mind", "url": "/mind/" },
     { "text": "Web Design", "url": "/design-gallery/" }
   ],

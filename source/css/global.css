@@ -6,16 +6,60 @@
 }
 
 html {
-	background-color: var(--off-white);
+	overflow-x: hidden;
 }
 
 body {
-	background-color: var(--off-white);
+	background-color: var(--paper);
 	color: var(--off-black);
 	font-family: "Palatino Linotype", Palatino, "Book Antiqua", Georgia, serif;
+}
+
+a.red-type {
+	color: var(--red-type);
+	text-decoration: none;
+}
+
+a.red-type:hover {
+	text-decoration: underline;
 }
 
 article {
 	margin: 5vh auto;
 	max-width: 60vw;
+}
+
+.fit-image {
+	display: block;
+	height: auto;
+  	margin: 0 auto;
+	width: 50%;
+}
+
+.flex {
+	display: flex;
+}
+
+.flex-column {
+	display: flex;
+	flex-direction: column;
+}
+
+.flex-row {
+	display: flex;
+	flex-direction: row;
+}
+
+.red-type {
+	color: var(--red-type);
+}
+
+.short-margin {
+	margin-top: 1em;
+	margin-bottom: 2em;
+}
+
+.tall-margin {
+	margin-top: 3em;
+	margin-bottom: 4em;
 }

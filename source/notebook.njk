@@ -1,22 +1,21 @@
 ---
-layout: article.njk
+layout: notebook.njk
 description: For writing, philosophic and technical.
-css: home.css
 ---
-<section class="home">
-  <p class="tagline">The breadth of knowledge is wide and there is plenty to read.</p>
 
-  <h2>Recent</h2>
-  <ul class="post-list">
-  {% for lettre in collections.lettres | sort(true, false, "date") %}
-    <li>
-      <a href="{{ lettre.url }}">{{ lettre.data.title }}</a>
-      <div class="post-meta">
-        <time datetime="{{ lettre.date | formatDate("YYYY-MM-DD") }}">{{ lettre.date | formatDate }}</time>
-        <span class="reading-time">{{ lettre.data.readingTime }}</span>
-      </div>
-      <p class="post-desc">{{ lettre.data.description }}</p>
-    </li>
-  {% endfor %}
-  </ul>
-</section>
+<h3 class="frontispiece">WILLIAM KELLY'S</h3>
+<h5 class="frontispiece">COLLECTED</h5>
+<h1 class="frontispiece">WRITINGS</h1>
+
+<img src="/assets/planets.png" id="frontispiece-image" class="fit-image" alt="Joannis Kepleri Astronomi Opera Omnia Vol. 1 (1858)" />
+
+<hr class="hr-short tall-margin">
+
+<ul class="post-list">
+{% for note in collections.notebook | sort(true, false, "date") %}
+  <li class="flex-column">
+    <a href="{{ note.url }}" class="red-type" style="align-self: flex-start;">{{ note.data.title }}</a>
+    <p class="post-desc" style="align-self: flex-end;">{{ note.data.description }}</p>
+  </li>
+{% endfor %}
+</ul>

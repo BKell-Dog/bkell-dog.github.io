@@ -20,6 +20,10 @@ module.exports = function (eleventyConfig) {
     return collectionApi.getFilteredByGlob("source/lettres/*.md");
   });
 
+  eleventyConfig.addCollection("notebook", function(collectionApi) {
+    return collectionApi.getFilteredByGlob("source/notebook/*.md");
+  });
+
   eleventyConfig.amendLibrary("md", mdLib => {
     mdLib.use(footnote);
 

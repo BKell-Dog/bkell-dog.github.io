@@ -1,0 +1,78 @@
+body {
+	align-items: center;
+	display: flex;
+	flex-direction: column;
+	margin: 0 auto;
+	max-width: 800px;
+	padding: 0;
+}
+
+header {
+	display: flex;
+	flex-direction: row;
+	margin-top: 1em;
+	width: 100%;
+}
+
+main {
+	margin-top: 1em;
+}
+
+nav {
+	width: 100%;
+}
+
+sup > a {
+	text-decoration: none;
+}
+
+sup > a:hover {
+	text-decoration: underline;
+}
+
+.frontispiece {
+	text-align: center;
+}
+
+#frontispiece-image {
+	width: 40%;
+}
+
+.hr-short {
+	max-width: 40%;
+}
+
+.nav-links {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	width: 100%;
+}
+
+.nav-links > li {
+	flex: 1;
+	text-align: center;
+}
+
+.post {
+	margin-top: 2vh;
+}
+
+.post a, .post em {
+	color: var(--red-type);
+	font-style: normal;
+}
+
+.post > header > h1 {
+	margin-bottom: 0.3em;
+}
+
+.post-list {
+	list-style-type: none;
+	margin: 0 auto;
+	max-width: 500px;
+}
+
+.post-list > li {
+	margin: 1em 0;
+}
