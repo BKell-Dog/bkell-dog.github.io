@@ -21,14 +21,16 @@ script: resume.js
 		{% else %}
 		<h2 class="company-name container-title">{{ company }}</h2>
 		{% endif %}
-		{% if comp_info.start and comp_info.end %}
 		<div class="company-meta container-meta">
 			{% if comp_info.location %}
 			<span class="company-location container-location">{{ comp_info.location }}</span>
 			{% endif %}
+			{%  if comp_info.start and comp_info.end and comp_info.end != "Present" %}
 			<time>{{ comp_info.start | formatDate("MMMM YYYY") }} — {{ comp_info.end | formatDate("MMMM YYYY") }}</time>
+			{% elif comp_info.start %}
+			<time>{{ comp_info.start | formatDate("MMMM YYYY") }} — Present</time>
+			{%  endif %}
 		</div>
-		{% endif %}
 		<p>{{ comp_info.description }}</p>
 	</div>
 	
