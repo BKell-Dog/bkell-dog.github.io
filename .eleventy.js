@@ -16,10 +16,6 @@ module.exports = function (eleventyConfig) {
 
   eleventyConfig.ignores.add("source/knowledge/**");
 
-  eleventyConfig.addCollection("lettres", function(collectionApi) {
-    return collectionApi.getFilteredByGlob("source/lettres/*.md");
-  });
-
   eleventyConfig.addCollection("notebook", function(collectionApi) {
     return collectionApi.getFilteredByGlob("source/notebook/*.md");
   });

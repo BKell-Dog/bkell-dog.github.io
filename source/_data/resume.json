@@ -1,5 +1,17 @@
 {
 	"work": {
+		"Imbas Technologies": {
+			"location": "New York City",
+			"start": "2025-12-15",
+			"roles": {
+				"Hardware Engineer": {
+					"start": "2025-12-15",
+					"description": "I am a generalist hardware engineer for Imbas, doing PCB design work for IoT, wearables, and various small electronics. I also am the team's RF specialist, so I also design RF circuits, test radio setups, and make system-level design decisions for wireless comms.",
+					"responsibilities": ["Full stack PCB design, from BOM selection to firmware testing.", "Consulting with clients on communications systems architecture.", "Validate RF systems."]
+				}
+			},
+			"website": "https://imbas.tech"
+		},
 		"General Motors": {
 			"location": "Warren, Michigan",
 			"start": "2023-07-17",
