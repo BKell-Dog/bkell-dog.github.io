@@ -23,7 +23,7 @@ a {
 }
 
 a:hover {
-	color: var(--off-white);
+	color: var(--paper);
 	background-color: var(--off-black);
 }
 
@@ -45,7 +45,7 @@ footer {
 }
 
 footer a:hover {
-	background-color: var(--off-white);
+	background-color: var(--paper);
 	color: var(--off-black);
 }
 
@@ -55,7 +55,7 @@ footer h1 {
 }
 
 footer h1::before, footer h1::after {
-	background-color: var(--off-white);
+	background-color: var(--paper);
 }
 
 h1 {
@@ -125,7 +125,7 @@ ul.two-column {
 .accordion-content {
 	padding: 0.3rem 1rem;
 	background-color: var(--off-black);
-	color: var(--off-white);
+	color: var(--paper);
 }
 
 .container {
