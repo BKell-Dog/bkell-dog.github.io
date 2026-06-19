@@ -3,7 +3,6 @@ title: Web Pages for the Few
 description: Secret Webpages using Custom TLS Certificates
 author: Will Kelly
 date: 2026-06-11
-layout: note.njk
 ---
 
 I wanted to publicly expose a webpage with sensitive information on it, information which should only be read by a few select people using a handful of devices. Therefore, I need a way to separate each person I've whitelisted from everyone else, and give one webpage to the whitelisted user, and a 404 to everyone else. A simple solution exists: I will use mTLS (mutual TLS). By preloading the whitelisted user's devices with a premade TLS client certificate, the user's browser will present it upon connection during TLS handshake; this certificate can then be parsed by the server, and based on what it receives the server can serve different pages. A missing or wrong certificate will be served nothing or a 404. It will also be difficult for malicious actors to steal a client certificate which is loaded onto end-device local memory and stored in the OS keychain.

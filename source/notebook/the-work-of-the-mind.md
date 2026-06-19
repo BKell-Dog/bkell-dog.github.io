@@ -3,7 +3,6 @@ title: The Work of the Mind
 description: Sifting through the minds of history's eminent thinkers.
 date: 2026-01-21
 readingTime: 1 min read
-layout: note.njk
 ---
 
 The [Work of the Mind](/mind/) is a project to understand the psychological conditions that precede innovation. We have writings on the personal lives of the eminent thinkers of history, written either by themselves or by others, and some studies have been made into their personal psychological states, but these remain academic. My intention is to gather the primary source writings from history's eminent thinkers so that they may be examined with fresh eyes.

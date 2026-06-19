@@ -3,7 +3,6 @@ title: Never Automate What You Do
 description: Against delegation to AI.
 date: 2026-02-26
 readingTime: 4 min read
-layout: note.njk
 ---
 
 >\[The Druids\] are said... to learn by heart a great number of verses; accordingly some remain in the course of training twenty years. Nor do they regard it lawful to commit these to writing, though in almost all other matters, in their public and private transactions, they use Greek characters. That practice they seem to me to have adopted for two reasons; because they neither desire their doctrines to be divulged among the mass of the people, nor those who learn, to devote themselves the less to the efforts of memory, relying on writing; since it generally occurs to most men, that, in their dependence on writing, they relax their diligence in learning thoroughly, and their employment of the memory.[^1]
