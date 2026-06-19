@@ -22,6 +22,18 @@
     {{ content | safe }}
   {% endblock %}
 </main>
+
+<script>
+  document.querySelectorAll('.copy-button').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const code = btn.closest('.highlight').querySelector('code').innerText;
+      navigator.clipboard.writeText(code).then(() => {
+        btn.classList.add('copied');
+        setTimeout(() => btn.classList.remove('copied'), 1800);
+      });
+    });
+  });
+</script>
 {% endblock %}
 
 

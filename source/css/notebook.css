@@ -30,12 +30,67 @@ sup > a:hover {
 	text-decoration: underline;
 }
 
+.code-title {
+	display: flex;
+ 	align-items: center;
+ 	justify-content: flex-end;
+ 	gap: 0.5rem;
+ 	padding: 0.3rem 0.75rem;
+	font-family: monospace;
+	font-size: 0.75rem;
+	user-select: none;
+}
+
+.copy-button {
+	/* Reset browser defaults */
+	appearance: none;
+	border: none;
+	background-color: transparent;
+	padding: 0;
+	cursor: pointer;
+	flex-shrink: 0;
+
+	/* Hide the default text */
+	font-size: 0;
+	color: transparent;
+
+	/* Size the clickable area around the icon */
+	width: 1.1rem;
+	height: 1.1rem;
+
+	/* Clipboard SVG */
+	background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%233d3d3d' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Crect x='9' y='9' width='13' height='13' rx='2' ry='2'/%3E%3Cpath d='M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1'/%3E%3C/svg%3E");
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: contain;
+
+	opacity: 0.55;
+	transition: opacity 0.15s ease;
+}
+
+.copy-button:hover {
+  opacity: 1;
+}
+
+.copy-button.copied {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%233d3d3d' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='20 6 9 17 4 12'/%3E%3C/svg%3E");
+  opacity: 1;
+}
+
 .frontispiece {
 	text-align: center;
 }
 
 #frontispiece-image {
 	width: 40%;
+}
+
+.highlight pre {
+ 	margin-top: 0;
+ 	border-radius: 0 0 6px 6px;
+ 	overflow-wrap: break-word;
+ 	white-space: pre-wrap;
+ 	word-break: break-all;
 }
 
 .hr-short {
