@@ -34,17 +34,6 @@ ul {
 	list-style: none;
 }
 
-ul li::before {
-	content: '–';
-	font-weight: 700;
-	margin-right: 0.5em;
-	margin-left: -1.25em;
-}
-
-header li::before {
-	content: none;
-}
-
 .code-title {
 	display: flex;
  	align-items: center;
