@@ -5,17 +5,7 @@
 {% endblock %}
 
 {% block body %}
-<header class="site-header">
-  {%  if site.navLinks %}
-  <nav>
-    <ul class="nav-links flex-row">
-      {% for link in site.navLinks %}
-      <li><a href="{{ link.url }}" class="red-type">{{ link.text }}</a></li>
-      {% endfor %}
-    </ul>
-  </nav>
-  {% endif %}
-</header>
+{% include "components/header.njk" %}
 
 <main>
   {% block content %}

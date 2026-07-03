@@ -1,0 +1,23 @@
+header {
+	display: flex;
+	flex-direction: row;
+	margin: 1em auto 0 auto;
+	max-width: 800px;
+	width: 100%;
+}
+
+header > nav {
+	width: 100%;
+}
+
+.nav-links {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	width: 100%;
+}
+
+.nav-links > li {
+	flex: 1;
+	text-align: center;
+}
