@@ -21,6 +21,8 @@ a.red-type {
 }
 
 a.red-type:hover {
+	background-color: inherit;
+	color: var(--red-type);
 	text-decoration: underline;
 }
 
