@@ -7,6 +7,10 @@ body {
 	padding: 0;
 }
 
+blockquote {
+	font-style: italic;
+}
+
 main {
 	margin-top: 1em;
 }
@@ -76,6 +80,14 @@ ul {
 
 #frontispiece-image {
 	width: 40%;
+}
+
+.footnotes {
+	font-size: 0.8rem;
+}
+
+.footnotes-list {
+	padding-left: 1rem;
 }
 
 .highlight pre {
