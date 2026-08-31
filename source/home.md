@@ -6,10 +6,10 @@ css: home.css
 
 Welcome. Under construction.
 
-See who I <a href="/resume">am</a>.
+See who I <a href="/resume/">am</a>.
 
-See what I <a href="/notebook">think</a>.
+See what I <a href="/notebook/">think</a>.
 
-See what I <a href="/knowledge">know</a>.
+See what I <a href="/knowledge/">know</a>.
 
 ![https://wellcomecollection.org/works/gswvaqb5/items](/assets/skeleton.png)
