@@ -1,7 +1,7 @@
 ---
 title: A Draggable Bookmark in HTML
 description: Useful for getting through text walls.
-date: 2026-01-19
+date: 2026-01-28
 ---
 
 I made a [page](https://wavelab.neocities.org/mind) where I could store documents relating to the Work of the Mind. These documents are speeches, autobiographies, poems, etc., and I realized it became difficult to keep track of my position on the page as I read, I would get lost and have to reread the same landmark passages multiple times. I thought, *if only I could put down a bookmark like in a real book!*

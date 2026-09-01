@@ -64,9 +64,9 @@ module.exports = function (eleventyConfig) {
       const displayLang = lang || "text";
 
       return `<div class="highlight">` +
-        `<div class="code-title">${displayLang}<button class="copy-button">Copy</button></div>` +
         `<pre class="hljs language-${displayLang}" data-language="${displayLang}" tabindex="0">` +
           `<code>${highlighted}</code>` +
+        `<div class="code-title">${displayLang}<button class="copy-button">Copy</button></div>` +
         `</pre>` +
       `</div>\n`;
     };

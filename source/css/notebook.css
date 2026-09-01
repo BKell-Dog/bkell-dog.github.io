@@ -16,6 +16,12 @@ main {
 	margin-top: 1em;
 }
 
+p > img {
+	display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
 sup > a {
 	text-decoration: none;
 }
@@ -91,13 +97,25 @@ ul {
 	padding-left: 1rem;
 }
 
-.highlight pre {
+.highlight {
+	background-color: #f2eee9;
 	border-left: 1px solid var(--off-black);
+}
+
+.highlight pre {
+	display: flex;
+	flex-direction: row;
+	align-items: flex-start;
  	margin-top: 0;
  	overflow-wrap: break-word;
  	padding-left: 10px;
  	white-space: pre-wrap;
  	word-break: break-all;
+}
+
+.highlight pre code {
+	flex: 1;
+	margin: 10px 0;
 }
 
 .hr-short {
